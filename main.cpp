@@ -6,14 +6,16 @@ using namespace std;
 
 int main(int argc,char *argv[]){
   int *pa, *pb, i, temp, *p;
-int n;
-cout << "How many number ?";
-cin >> n;
+int n =argc-1;
+//cout << "How many number ?";
+//cin >> n;
 pa = new int[n];
 
-for (i=0; i<n; i++,pa++){
-  cout<<"Input no. "<<i<<":";
-  cin >> *pa;
+for (i=0; i<n; i++){
+  //cout<<"Input no. "<<i<<":";
+ // cin >> *pa;
+ *pa=atoi(argv[i+1]);
+    pa++;
   
 }
 pa-=n;
